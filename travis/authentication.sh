@@ -31,7 +31,7 @@ while [ "$1" != '' ]; do
   shift
 done
 
-[  "$TRAVIS_PULL_REQUEST" != 'false' ] || [  "$TRAVIS_BRANCH" != "$MAIN_BRANCH" ] && exit 0
+[  "$TRAVIS_PULL_REQUEST" == 'true' ] || [  "$TRAVIS_BRANCH" != "$MAIN_BRANCH" ] && exit 1
 
 #
 # Authentication
