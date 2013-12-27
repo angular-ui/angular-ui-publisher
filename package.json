@@ -1,0 +1,45 @@
+{
+  "name": "angular-ui-publisher",
+  "version": "1.0.0",
+  "description": "Helper component for building and publishing your angular modules as bower components",
+  "main": "Gulpfile.js",
+  "dependencies": {
+    "conventional-changelog-wrapper": "douglasduteil/conventional-changelog-wrapper",
+    "dateformat": "*",
+    "event-stream": "*",
+    "gulp": "*",
+    "gulp-header": "*",
+    "gulp-rename": "*",
+    "gulp-rimraf": "*",
+    "gulp-util": "*",
+    "lodash.after": "*",
+    "lodash.assign": "*",
+    "lodash.template": "*",
+    "ngmin": "*",
+    "shelljs": "*"
+  },
+  "devDependencies": {
+    "jshint": "*",
+    "jshint-stylish": "*"
+  },
+  "scripts": {
+    "test": "jshint --reporter node_modules/jshint-stylish/stylish.js Gulpfile.js lib/*"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/angular-ui/angular-ui-publisher.git"
+  },
+  "keywords": [
+    "angular-ui",
+    "component",
+    "publisher",
+    "travis",
+    "bower"
+  ],
+  "author": "Douglas Duteil",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/angular-ui/angular-ui-publisher/issues"
+  },
+  "homepage": "https://github.com/angular-ui/angular-ui-publisher"
+}

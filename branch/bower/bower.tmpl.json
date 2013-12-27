@@ -1,0 +1,15 @@
+{
+  "name": "<%= bwr.name %>",
+  "version": "<%= bwr.version %>",
+  "main": "<%= bwr.main %>"<%
+if (bwr.dependencies){
+  var keyArr = Object.keys(bwr.dependencies);
+  print(',\n  "dependencies": {\n');
+  for(var i = 0, len = keyArr.length; i < len; i++) {
+    var dep = keyArr[i];
+    print('    "'+ dep + '": "'+ bwr.dependencies[dep] + '"' + ((i < len-1) ? ',' : '') + '\n');
+  }
+  print('  }');
+}
+%>
+}
