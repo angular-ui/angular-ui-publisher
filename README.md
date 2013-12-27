@@ -241,10 +241,12 @@ after_success:
 ```
 
 I recommend adding a ` || exit 0` after the authentication script to make sure that if your access is denied no building and publishing will be made.  
-If you need to change the restriction to another branch that *master* by default, use the `--branch`option like below :
+If you need to change the restriction to another branch that *master* by default, use the environment variable `MAIN_BRANCH` like below :
 
 ```yaml
-after_success:
-- "./node_modules/angular-ui-publisher/travis/authentication.sh --branch=develop || exit 0"
-- "grunt dist build:gh-pages publish:gh-pages build:bower publish:bower"
+env:
+  global:
+  - MAIN_BRANCH=develop
+  - REPO="git@github.com:<org>/<repo>.git"
+  - secure: ! 'MR37oFN+bprRlI1/YS3...etc...
 ```

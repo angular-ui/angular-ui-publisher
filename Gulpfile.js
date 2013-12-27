@@ -38,7 +38,7 @@ gulp.task('build_subbower', function(done){
 });
 
 
-var allowPushOnRepo = (process.env.TRAVIS == 'true') && (process.env.TRAVIS_PULL_REQUEST == 'false') && (process.env.TRAVIS_BRANCH == 'develop') && true;
+var allowPushOnRepo = (process.env.TRAVIS == 'true') && (process.env.TRAVIS_PULL_REQUEST == 'false') && true;
 gulp.task('publish_gh-pages', function(cb){
   if (process.env.TRAVIS){
     publish.apply(this, [{
