@@ -4,18 +4,15 @@
   "description": "Helper component for building and publishing your angular modules as bower components",
   "main": "Gulpfile.js",
   "dependencies": {
-    "conventional-changelog-wrapper": "douglasduteil/conventional-changelog-wrapper",
     "dateformat": "*",
     "event-stream": "*",
     "gulp": "*",
-    "gulp-header": "*",
     "gulp-rename": "*",
     "gulp-rimraf": "*",
     "gulp-util": "*",
     "lodash.after": "*",
     "lodash.assign": "*",
     "lodash.template": "*",
-    "ngmin": "*",
     "shelljs": "*"
   },
   "devDependencies": {
