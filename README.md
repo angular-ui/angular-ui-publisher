@@ -1,4 +1,4 @@
-# Angular UI Publisher
+# Angular UI Publisher [![Build Status](https://travis-ci.org/angular-ui/angular-ui-publisher.png?branch=master)](https://travis-ci.org/angular-ui/angular-ui-publisher)
 
 Helper component for building and publishing your angular modules as bower components
 
