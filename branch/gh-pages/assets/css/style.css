@@ -54,9 +54,6 @@ body{
     font-size: 60px;
     line-height: 1;
   }
-  .navbar-nav {
-    float: none;
-  }
 }
 
 @media (min-width: 992px) {
