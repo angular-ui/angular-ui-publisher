@@ -112,15 +112,22 @@
 
 <!-- Le javascript
 ================================================== -->
-<script src="assets/vendor/prettify.js"></script>
-
-<script src="assets/vendor/angular.min.js"></script>
-<script src="assets/vendor/ui-bootstrap-tpls.min.js"></script>
-<script src="core/prettifyDirective.js"></script>
-<script src="core/plunker.js"></script>
-
 <%
+var defaultjs = [
+  'assets/vendor/prettify.js',
+  'assets/vendor/angular.min.js',
+  'assets/vendor/ui-bootstrap-tpls.min.js',
+  'core/prettifyDirective.js',
+  'core/plunker.js',
+];
+
 var jsFiles = public.js || [];
+
+if(typeof jsFiles === 'function'){
+  jsFiles = public.js(defaultjs);
+}else {
+  jsFiles = defaultjs.concat(jsFiles);
+}
 
 for(var i = 0, len = jsFiles.length; i < len; i++) {
   print('<script src="' + jsFiles[i] + '"></script>\n');

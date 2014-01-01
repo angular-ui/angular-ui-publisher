@@ -177,8 +177,11 @@ This config object can content the following key:
   inlineJS : String,
   // The javascript to inline at the end of the index.html file in the gh-pages
 
-  js : Array.of(String),
-  // The css files to use in the gh-pages (ex: ['dist/ui-utils.js'])
+  js : Array.of(String) | Function,
+  // The js files to use in the gh-pages, loaded after angular by default (ex: ['dist/ui-utils.js'])
+  // or
+  // function that returns the final array of files to load 
+  // (ex: function(defaultJsFiles) { return ['beforeFile.js'].concat(defaultJsFiles); })
 
   css : Array.of(String),
   // The css files to use in the gh-pages
