@@ -194,7 +194,10 @@ This config object can content the following key:
   sub_dist_dir : String,
   // directory used to store the sub component sources in the './dist' directory (ex: 'sub')
 
-
+  bowerData : {
+    // Bower data to overwrite.
+    // (ex: { name: 'my-component', main: './my-component.js' })
+  }
 
   subcomponents : {  // Collection of sub component
     "<sub component name>" : {
