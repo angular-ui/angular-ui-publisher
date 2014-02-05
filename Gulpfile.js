@@ -28,7 +28,11 @@ gulp.task('clean', function(done) {
 });
 
 gulp.task('build_gh-pages', build.ghpages);
-gulp.task('build_bower', build.bower);
+
+gulp.task('build_bower', function(done){
+  build.bower(done, cm.public.bowerData);
+});
+
 gulp.task('build_subbower', function(done){
   var moduleNames = Object.keys(cm.public.subcomponents);
   var almostDone = cm._.after(moduleNames.length, done);
