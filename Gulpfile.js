@@ -87,11 +87,11 @@ gulp.task('publish_subbower', function(done){
 function prefixedBranchedTasks(prefix){
 
   gulp.task(prefix, function(cb){
-    if (!this.env.branch )
+    if (!cm.env.branch )
       throw new Error('\nJust say want you want to ' + prefix + ' like\n' + prefix + ' --branch=bower');
 
     // TODO test if exist ?
-    gulp.run(prefix + '_' + this.env.branch, cb);
+    gulp.run(prefix + '_' + cm.env.branch, cb);
   });
 
 }
