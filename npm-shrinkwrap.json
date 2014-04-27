@@ -1,6 +1,6 @@
 {
   "name": "angular-ui-publisher",
-  "version": "1.2.5",
+  "version": "1.2.6",
   "dependencies": {
     "dateformat": {
       "version": "1.0.7-1.2.3",
@@ -43,7 +43,6 @@
     "gulp": {
       "version": "3.6.2",
       "from": "gulp@*",
-      "resolved": "https://registry.npmjs.org/gulp/-/gulp-3.6.2.tgz",
       "dependencies": {
         "archy": {
           "version": "0.0.2",
@@ -175,7 +174,7 @@
                 },
                 "minimatch": {
                   "version": "0.2.14",
-                  "from": "minimatch@~0.2.12",
+                  "from": "minimatch@~0.2.11",
                   "dependencies": {
                     "lru-cache": {
                       "version": "2.5.0",
@@ -289,7 +288,7 @@
           "dependencies": {
             "readable-stream": {
               "version": "1.0.27-1",
-              "from": "readable-stream@~1.0.17",
+              "from": "readable-stream@1.0",
               "dependencies": {
                 "core-util-is": {
                   "version": "1.0.1",
@@ -365,7 +364,7 @@
           "dependencies": {
             "readable-stream": {
               "version": "1.0.27-1",
-              "from": "readable-stream@~1.0.17",
+              "from": "readable-stream@1.0",
               "dependencies": {
                 "core-util-is": {
                   "version": "1.0.1",
