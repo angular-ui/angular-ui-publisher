@@ -47,7 +47,7 @@ gulp.task('publish_gh-pages', function(cb){
   if (process.env.TRAVIS){
     publish.apply(this, [{
       tag:  false,
-      push: allowPushOnRepo,
+      push: allowPushOnRepo && /^master$/.test(process.env.TRAVIS_BRANCH),
       message: 'Travis commit : build ' + process.env.TRAVIS_BUILD_NUMBER
     }, cb]);
   }else{
@@ -59,7 +59,7 @@ gulp.task('publish_bower', function(cb){
   if (process.env.TRAVIS){
     publish.apply(this, [
     {
-      push: allowPushOnRepo,
+      push: allowPushOnRepo && /^src\d+\.\d+\.\d+.*$/.test(process.env.TRAVIS_BRANCH),
       message: 'Travis commit : build ' + process.env.TRAVIS_BUILD_NUMBER
     }, cb]);
   }else{
@@ -77,7 +77,7 @@ gulp.task('publish_subbower', function(done){
       cloneLocation: path.resolve(path.join(process.cwd(), cm.PUBLISH_DIR, 'subbower', mName)),
       dirSrc: path.resolve(path.join(process.cwd(), cm.BUILD_DIR, 'subbower', mName)),
       message: 'Travis commit : build ' + process.env.TRAVIS_BUILD_NUMBER,
-      push: allowPushOnRepo,
+      push: allowPushOnRepo && /^src\d+\.\d+\.\d+.*$/.test(process.env.TRAVIS_BRANCH),
       tag: mName + '-' + cm.pkg.version
     }, almostDone]);
   }

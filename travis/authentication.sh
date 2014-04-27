@@ -1,12 +1,10 @@
 #!/bin/sh
 
-[ -z "$MAIN_BRANCH" ] && MAIN_BRANCH="master"
-
 USER_EMAIL='angular-ui@googlegroups.com'
 USER_NAME='AngularUI (via TravisCI)'
 
-echo 'The next script will only run on the "'"$MAIN_BRANCH"'" branch'
-[  "$TRAVIS_PULL_REQUEST" = 'true' ] || [  "$TRAVIS_BRANCH" != "$MAIN_BRANCH" ] && exit 1
+echo 'The next script will only run on a Tracis "master" branch or "^src\d+\.\d+\.\d+.*$" tags'
+[  "$TRAVIS_PULL_REQUEST" = 'true' ] ||  [ !  `echo "$TRAVIS_BRANCH" | egrep "^(master|(src|[a-z]+-)[0-9]+\.[0-9]+\.[0-9]+(.*))$"` ] && exit 1
 
 #
 # Authentication
