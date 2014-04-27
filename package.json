@@ -13,7 +13,8 @@
     "lodash.after": "*",
     "lodash.assign": "*",
     "lodash.template": "*",
-    "shelljs": "*"
+    "shelljs": "*",
+    "yargs": "*"
   },
   "devDependencies": {
     "jshint": "*",
