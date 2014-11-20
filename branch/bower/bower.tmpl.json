@@ -1,7 +1,12 @@
 {
   "name": "<%= bwr.name %>",
   "version": "<%= bwr.version %>",
-  "main": "<%= bwr.main %>"<%
+  "main": [<%
+if (typeof bwr.main == 'string'){
+  bwr.main = [bwr.main];
+}
+print('\"' + bwr.main.join('", "') + '\"');
+%>]<%
 if (bwr.dependencies){
   var keyArr = Object.keys(bwr.dependencies);
   print(',\n  "dependencies": {\n');
