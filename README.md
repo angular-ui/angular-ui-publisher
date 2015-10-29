@@ -1,5 +1,7 @@
 # Angular UI Publisher [![Build Status](https://travis-ci.org/angular-ui/angular-ui-publisher.png?branch=master)](https://travis-ci.org/angular-ui/angular-ui-publisher) [![NPM version](https://badge.fury.io/js/angular-ui-publisher.png)](http://badge.fury.io/js/angular-ui-publisher)
 
+[![Join the chat at https://gitter.im/angular-ui/angular-ui-publisher](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/angular-ui/angular-ui-publisher?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+
 Helper component for building and publishing your angular modules as bower components
 
 ## Goal
